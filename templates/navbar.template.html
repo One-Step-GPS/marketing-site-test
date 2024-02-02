@@ -1,0 +1,648 @@
+{{$phone := .Value "onestepgps_phone"}}
+<html lang="en">
+  <head>
+    <script>
+      var firstTargetedChatShown = false;
+
+      function afterFirstTargetedChat() {
+        if (!firstTargetedChatShown) {
+          firstTargetedChatShown = true;
+          Chatra(
+            "sendAutoMessage",
+            "Hi, I'm available to answer any questions at {{ FormatPhone $phone }}. Or we can chat. What type of vehicles do you need tracking for?"
+          );
+          Chatra("show");
+        }
+
+        firstTargetedChatShown = true;
+      }
+
+      window.ChatraSetup = {
+        deferredLoading: true,
+        groupId: "baykdqGHQfX7Engzu",
+        onAnalyticEvent: function (eventName) {
+          if (eventName == "Bot scenario shown") {
+            afterFirstTargetedChat = function () {
+              /* empty */
+            };
+            Chatra("show");
+          }
+
+          if (eventName == "Targeted chat shown") {
+            afterFirstTargetedChat();
+          }
+        },
+      };
+      function chatraOnload() {
+        Chatra("hide");
+        setTimeout(function () {
+          if (!firstTargetedChatShown) {
+            Chatra("show");
+            afterFirstTargetedChat = function () {
+              /* empty */
+            };
+          }
+        }, 8 * 1000);
+      }
+
+      function isMobileBrowser() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+      }
+
+      //we want to add chatra to the page if they click/scroll
+      //but wait no more than 1 second
+      document.addEventListener("scroll", doInitChatra);
+      window.addEventListener("click", doInitChatra);
+      let chatra_loader;
+      if (!isMobileBrowser()) {
+        chatra_loader = setTimeout(() => {doInitChatra()}, 1000);
+      }
+
+      if (window.Chatra == undefined) {
+        window.Chatra = function () {
+          let args = arguments;
+          chatraOnload = function () {
+            window.Chatra.apply(null, args);
+          };
+
+          doInitChatra();
+        };
+      }
+
+      function initChatra(d, w, c) {
+        // prior to chatra being loaded, a placeholder Chatra function is used to store and refire Chatra(...) calls
+        // we delete the function here so Chatra can properly create its Chatra() function
+        delete window.Chatra;
+
+        w.ChatraID = "K4aXkqbtxXZvgFbRF";
+        var s = d.createElement("script");
+        w[c] =
+          w[c] ||
+          function () {
+            (w[c].q = w[c].q || []).push(arguments);
+          };
+        s.async = true;
+        s.onload = chatraOnload;
+        s.src =
+          (d.location.protocol === "https:" ? "https:" : "http:") +
+          "//call.chatra.io/chatra.js";
+        if (d.head) d.head.appendChild(s);
+      }
+
+      function doInitChatra() {
+        initChatra(document, window, "Chatra");
+        document.removeEventListener("scroll", doInitChatra);
+        window.removeEventListener("click", doInitChatra);
+        if (!isMobileBrowser()) {
+            clearTimeout(chatra_loader)
+        }
+      }
+    </script>
+  </head>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THZDMWJ " height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="header" id="header-container">
+    {{ template "templates/demo-modal.template.html" .}}
+    <div class="hidden row align-items-center topnav sticky" id="myTopnav">
+      <a
+        href="/"
+        class="hidden main-logo main-page-scroll-disappear scroll-color"
+      >
+        <img
+          width="36px"
+          height="36px"
+          alt="OneStepGps Logo"
+          id="logo-mark"
+          src="/images/onestepgps_white_logotype.svg"
+          class="logotype"
+      /></a>
+      <a href="#" class="icon" onclick="return topNavResponsive()">
+        <i id="nav-icon" class="fa fa-bars fa-2x index-black"></i>
+        <span class="sr-only">Navigation Dropdown</span></a
+      >
+      <div
+        id="headerReviewDiv"
+        class="nav-review-div hidden-600"
+        style="position: absolute; top: 70px; left: 7px"
+      >
+        <div
+          class="main-page-scroll-disappear"
+          style="height: 20px; padding-bottom: 7px"
+        >
+          <img
+            alt=""
+            src="/images/star-3.svg"
+            class="hidden"
+            width="14px"
+            height="14px"
+          />
+          <img
+            alt=""
+            src="/images/star-3.svg"
+            class="hidden"
+            width="14px"
+            height="14px"
+          />
+          <img
+            alt=""
+            src="/images/star-3.svg"
+            class="hidden"
+            width="14px"
+            height="14px"
+          />
+          <img
+            alt=""
+            src="/images/star-3.svg"
+            class="hidden"
+            width="14px"
+            height="14px"
+          />
+          <img
+            alt=""
+            src="/images/star-3.svg"
+            class="hidden"
+            width="14px"
+            height="14px"
+          />
+        </div>
+        <div class="nav-review-text index-black" style="padding: 3px 0px">
+          Overall Satisfaction Rating
+        </div>
+        <div class="nav-review-subtitle index-black">15,000+ Customers</div>
+        <div class="nav-review-subtitle index-black" style="padding: 3px 0px">
+          1,000+ Ratings
+        </div>
+      </div>
+      <!-- <a href="#" class="nav-up-arrow main-page-scroll-appear "><i class="fa fa-arrow-up fa-2x nav-arrow"></i></a> -->
+      <a
+        href="#link-features"
+        class="main-page-scroll-appear"
+        onclick="setNavLinkActive(event)"
+        >Features</a
+      >
+      <a
+        href="#link-why-use-us"
+        class="main-page-scroll-appear active"
+        onclick="setNavLinkActive(event)"
+        >Why use us</a
+      >
+      <a
+        href="#link-hardware"
+        class="main-page-scroll-appear"
+        onclick="setNavLinkActive(event)"
+        >Hardware</a
+      >
+      <a
+        href="#link-what-makes-us-different"
+        class="main-page-scroll-appear"
+        onclick="setNavLinkActive(event)"
+        >Why We're different</a
+      >
+      <a
+        href="#link-testimonials"
+        class="main-page-scroll-appear"
+        onclick="setNavLinkActive(event)"
+        >Testimonials</a
+      >
+      <div class="hidden spacer mobile-hidden"></div>
+
+      <div class="hidden dropselect">
+        <button
+          class="hidden dropbtn scroll-color index-black"
+          onclick="navMenuOpenClose()"
+          aria-label="products"
+        >
+          Products
+          <i
+            id="drop-icon"
+            class="hidden fa fa-chevron-down fa-xs drop-icon"
+          ></i>
+        </button>
+        <div id="drop-content" class="hidden dropselect-content">
+          <a href="/fleet-tracking">
+            <img
+              loading="lazy"
+              alt="Truck icon"
+              onerror="if(this.getAttribute('src') != ''){ this.src='./images/truck-1.png'}"
+              src="/images-webp/truck-1.webp"
+              class="hidden dropdown-icon"
+              width="22px"
+              height="14px"
+            />Fleet Tracking</a
+          >
+          <a href="/trucking-and-eld"
+            ><img
+              loading="lazy"
+              alt="Delivery van icon"
+              onerror="if(this.getAttribute('src') != ''){ this.src='./images/delivery-van.png'}"
+              src="/images-webp/delivery-van.webp"
+              class="hidden dropdown-icon"
+              width="22px"
+              height="14px"
+            />Trucking and ELD</a
+          >
+          <a href="/asset-tracking"
+            ><img
+              loading="lazy"
+              alt="3d cube icon"
+              onerror="if(this.getAttribute('src') != ''){ this.src='./images/3-d-printing-cube.png'}"
+              src="/images-webp/3-d-printing-cube.webp"
+              class="hidden dropdown-icon"
+              width="22px"
+              height="22px"
+            />Asset Tracking</a
+          >
+          <a href="/solar-powered-tracker"
+            ><i class="fas fa-sun" style="padding-right: 15px; color: grey"></i
+            >Solar Powered Tracking</a
+          >
+          <a href="/dash-camera"
+            ><i
+              class="fas fa-camera"
+              style="padding-right: 15px; color: grey"
+            ></i
+            >AI Dashcam</a
+          >
+          <a href="/battery-tracker">
+            <img
+              alt=""
+              src="/images/battery-bolt.svg"
+              class="hidden"
+              width="15px"
+              height="15px"
+              style="margin-right: 15px"
+            />
+            Battery Tracking</a
+          >
+          <a href="/plug-in-tracker">
+            <i
+              class="fas fa-car-on"
+              style="padding-right: 15px; color: grey"
+            ></i>
+            Plug In Tracker</a
+          >
+          <a href="/hardwired-tracker">
+            <i
+              class="fas fa-tools"
+              style="padding-right: 15px; color: grey"
+            ></i>
+            Hardwired Tracker </a
+          >
+        </div>
+      </div>
+
+      <a href="/reviews" class="hidden index-black scroll-color">Reviews</a>
+      <a
+        href="https://track.onestepgps.com/"
+        class="hidden index-black scroll-color"
+        >Log in</a
+      >
+
+      <a href="tel:{{$phone}}" class="hidden button-primary button-primary-nav">
+        <!--      <img loading="lazy" alt=""-->
+        <!--        onerror="if(this.getAttribute('src') != ''){ this.src='./images/icon-phone@3x.png'}" id="icon-phone-header"-->
+        <!--        src="/images-webp/icon-phone@3x.webp" width="14px" height="14px" class="hidden iconphone">-->
+        {{FormatPhone $phone}}</a
+      >
+      <a
+        href="#"
+        class="hidden button-secondary button-primary-nav chat-button"
+      >
+        <img
+          alt="Chat icon"
+          onerror="if(this.getAttribute('src') != ''){ this.src='./images/comment-alt-dots-3.png'}"
+          src="/images-webp/comment-alt-dots-3.webp"
+          class="hidden comment-alt-dots3"
+          width="17px"
+          height="15px"
+        />
+        Chat with us
+      </a>
+    </div>
+  </div>
+  {{block "page-content" .}} {{end}}
+<!--  <div id="mock-chatra" class="bounce chat-button">-->
+<!--    <span id="mock-chatra-bullet-icon"></span>-->
+<!--    <span id="mock-chatra-text">Chat with us, we are online!</span>-->
+<!--  </div>-->
+<!--  <div id="chatra-cookie-prompt" class="cookieconsent-optout-preferences cookieconsent-optout-statistics">-->
+<!--    <div class="row justify-content-end w-100">-->
+<!--      <div class="default-cursor" onclick="document.getElementById('chatra-cookie-prompt').style.display = 'none'">x</div>-->
+<!--    </div>-->
+<!--    <p>We use live chat to easily communicate with our customers.</p>-->
+<!--    <p>Please provide your consent to use cookies to enable the chat functionality.</p>-->
+<!--    <button class="btn btn-primary" onclick="Cookiebot.renew()">Opt-in to cookies</button>-->
+<!--  </div>-->
+  <footer>
+    <div class="hidden row h-100 align-items-center">
+      <div class="hidden row footer-container">
+        <div class="hidden col-md-4 col-sm-12">
+          <div class="hidden row footer-row">
+            <div class="hidden footer-logo">
+              <a href="/" class="footer-logo">
+                <img
+                  loading="lazy"
+                  alt="OnestepGPS.com"
+                  src="/images/onestepgps_color_logotype.svg"
+                  height="30px"
+                  width="100%"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="hidden row">
+            <div class="hidden footer-copyright pb-32">
+              ©2023 One Step GPS, LLC
+            </div>
+          </div>
+          <div class="hidden row footer-row pb-0">
+            <a
+              href="tel:{{$phone}}"
+              class="hidden button-primary button-primary-nav m-0"
+              ><img
+                loading="lazy"
+                alt="Phone icon"
+                onerror="if(this.getAttribute('src') != ''){ this.src='./images/icon-phone@3x.png'}"
+                id="icon-phone-header"
+                src="/images-webp/icon-phone@3x.webp"
+                width="14px"
+                height="14px"
+                class="hidden iconphone"
+              />
+              {{FormatPhone $phone}}</a
+            >
+          </div>
+          <div class="hidden row pb-0">
+            <a
+              href="#"
+              class="hidden button-secondary button-primary-nav m-0 chat-button"
+            >
+              <img
+                loading="lazy"
+                alt="Chat icon"
+                onerror="if(this.getAttribute('src') != ''){ this.src='./images/comment-alt-dots-3.png'}"
+                src="/images-webp/comment-alt-dots-3.webp"
+                class="hidden comment-alt-dots3"
+                width="17px"
+                height="15px"
+              />
+              Chat with us
+            </a>
+          </div>
+          <div class="hidden row pb-0">
+            <a
+              href="https://www.facebook.com/onestepgps"
+              target="_blank"
+              class="footer-social-logo"
+            >
+              <img
+                loading="lazy"
+                alt="facebook link"
+                src="/images/fb-logo.png"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/one-step-gps/"
+              target="_blank"
+              class="footer-social-logo"
+            >
+              <img
+                loading="lazy"
+                alt="linkedin link"
+                src="/images/li-logo.png"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden col-sm">
+          <div class="hidden row pb-32">
+            <div class="hidden footer-col-title">PRODUCTS & SOLUTIONS</div>
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/money-back-guarantee" class="hidden footer-nav-link"
+              >Money Back Guarantee</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/features" class="hidden footer-nav-link">Features</a>
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/warranty" class="hidden footer-nav-link"
+              >Lifetime Warranty</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a
+              rel="nofollow"
+              href="/installation"
+              class="hidden footer-nav-link"
+              >Installation</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a
+              href="https://track.onestepgps.com/support.php"
+              class="hidden footer-nav-link"
+              >Help Center</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/glossary" class="hidden footer-nav-link">Glossary</a>
+          </div>
+        </div>
+        <div class="hidden col-sm">
+          <div class="hidden row pb-32">
+            <a href="/about" class="hidden footer-col-title">ABOUT US</a>
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/contact-us" class="hidden footer-nav-link">Contact Us</a>
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/privacy-policy" class="hidden footer-nav-link"
+              >Privacy Policy</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/terms-and-conditions" class="hidden footer-nav-link"
+              >Terms and Conditions</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/integrations" class="hidden footer-nav-link"
+              >Integrations</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/careers" class="hidden footer-nav-link">Careers</a>
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/blog" class="hidden footer-nav-link">Blog</a>
+          </div>
+          <!-- <div class="hidden row footer-row">
+          <a href="./sitemap" class="hidden footer-nav-link">Sitemap</a>
+        </div> -->
+        </div>
+        <div class="hidden col-sm">
+          <div class="hidden row footer-row pt-md-5 pt-sm-0">
+            <a href="/investors" class="hidden footer-nav-link">Investors</a>
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/legal-compliance" class="hidden footer-nav-link"
+              >Legal & Compliance</a
+            >
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/partner-code-of-conduct" class="hidden footer-nav-link">Partner Code of Conduct</a>
+          </div>
+          <div class="hidden row footer-row">
+            <a href="/trust" class="hidden footer-nav-link">Security</a>
+          </div>
+<!--          <div class="hidden row footer-row">-->
+<!--            <a href="/cookie-declaration" class="hidden footer-nav-link">Cookie Declaration</a>-->
+<!--          </div>-->
+        </div>
+        <div class="hidden col-sm mw-200">
+          <div class="footer-row">
+            <a
+              href="https://apps.apple.com/us/app/one-step-gps-live-tracking/id1307133985"
+              ><img
+                loading="lazy"
+                alt="App store download button"
+                onerror="if(this.getAttribute('src') != ''){ this.src='./images/appstore.png'}"
+                src="/images-webp/appstore.webp"
+                class="hidden footer-download-image"
+                width="135px"
+                height="40px"
+            /></a>
+          </div>
+          <div class="pb-24">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.onestepgps.onestepgps"
+              ><img
+                loading="lazy"
+                alt="Google play store download button"
+                onerror="if(this.getAttribute('src') != ''){ this.src='./images/googleplay.png'}"
+                src="/images-webp/googleplay.webp"
+                class="hidden footer-download-image"
+                width="135px"
+                height="40px"
+            /></a>
+          </div>
+          <div aria-hidden="true">
+            <img
+              loading="lazy"
+              alt="OneStepGPS QR code"
+              src="/images/qr-code.png"
+              width="114px"
+              height="114px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      //listener for all buttons that open the demo form
+      var demoBtns = document.getElementsByClassName("demoButton");
+      for (i = 0; i < demoBtns.length; i++) {
+        demoBtns[i].onclick = function (event) {
+          // prevents the demo links from scrolling to the top of the page
+          event.preventDefault();
+
+          resetForm();
+          demoModal.style.display = "flex";
+
+          // Lazy load recaptcha
+          if (!window?.recaptcha_loaded) {
+            let head = document.getElementsByTagName("head")[0];
+            let script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://www.google.com/recaptcha/api.js";
+            head.appendChild(script);
+            window.recaptcha_loaded = true;
+          }
+        };
+      }
+      //remove links to nonexistent sections if we're not on the main page
+      if (window.location.pathname !== "/") {
+        document
+          .querySelectorAll(
+            '[class^="main-page-scroll-appear"],[class*=" main-page-scroll-appear"]'
+          )
+          .forEach((el) => el.remove());
+      }
+
+      /**
+       * On small screens we make the dropdown menu visible
+       */
+      function navMenuOpenClose() {
+        if (window.screen.width <= 1366) {
+          var dropContent = document.getElementById("drop-content");
+          var dropIcon = document.getElementById("drop-icon");
+          if (dropContent.style.display === "none") {
+            dropContent.style.display = "block";
+            dropIcon.style.transform = "rotate(180deg)";
+          } else {
+            dropContent.style.display = "none";
+            dropIcon.style.transform = "rotate(0deg)";
+          }
+        }
+      }
+
+      /**
+       *Styles the top navigation dropdown for smaller screens
+       */
+      function topNavResponsive() {
+        //get all the nav elements
+        var navIcon = document.getElementById("nav-icon");
+        var navbar = document.getElementById("myTopnav");
+        var logo = document.getElementById("logo-mark");
+        var navbarTop = navbar.offsetTop;
+        var x = document.getElementById("myTopnav");
+        var headerContainer = document.getElementById("header-container");
+        var dropContent = document.getElementById("drop-content");
+        var reviewContent = document.getElementById("headerReviewDiv");
+        var navbar = document.getElementById("myTopnav");
+
+        //opening the nav dropdown
+        if (!x.classList.contains("responsive")) {
+          x.className += " responsive";
+          headerContainer.className = "header-container";
+          navIcon.classList.replace("fa-bars", "fa-times");
+          navIcon.style.color = "#4193df";
+          navbar.style.boxShadow = "none";
+          reviewContent.style.display = "none";
+          logo.src = "/images/onestepgps_color_logotype.svg";
+          //closing the dropdown
+        } else {
+          x.classList.remove("responsive");
+          headerContainer.className = "";
+          navIcon.classList.replace("fa-times", "fa-bars");
+          dropContent.style.display = "none";
+          if (window.pageYOffset <= navbarTop) {
+            reviewContent.style.display = "block";
+          }
+          //do not return to white svg on home page
+          if (sPage !== "/") {
+            logo.src = "/images/onestepgps_white_logotype.svg";
+            navIcon.style = "color: #ffffff";
+          }
+        }
+
+        //return false so href does not sroll to top of page
+        return false;
+      }
+      //sets the active class on the header links on the home page
+      //removes active class from others
+      function setNavLinkActive(evt) {
+        let i, links;
+        links = document.getElementsByClassName("main-page-scroll-appear");
+        for (i = 0; i < links.length; i++) {
+          links[i].className = links[i].className.replace(" active", "");
+        }
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </footer>
+</html>

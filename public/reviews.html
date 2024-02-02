@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{ template "templates/header-tags.template.html" .}}
+    <title>Reviews - OneStepGPS.com</title>
+    <meta name="description"
+        content="We have an exceptional GPS Tracking and Fleet Tracking product at a low price and our customers love us! 4.9 out of 5 stars! Read what they have to say.">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Review",
+            "author": {
+                "@type": "Person",
+                "name": "Brian S."
+            },
+            "itemReviewed": {
+                "@type": "Product",
+                "name": "One Step GPS",
+                "image": "https://www.onestepgps.com/images-webp/device1.webp",
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "USD",
+                    "price": "13.95",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://www.onestepgps.com/"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "ratingCount": "1225",
+                    "reviewCount": "1225",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Steven A."
+                        },
+                        "description": "One STep GPS Fleet Tracking"
+                    }
+                ],
+                "description": "One Step GPS tracking for only 13.95 a month",
+                "brand": "One Step GPS"
+            },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "worstRating": "1",
+                "bestRating": "5",
+                "reviewAspect": ""
+            },
+            "datePublished": "2019-05-14T07:00:00.000Z",
+            "description": "One Step GPS Fleet Tracking"
+        }
+    </script>
+
+</head>
+
+<body onload="animateHTML();">
+{{ template "templates/navbar.template.html" .}}
+{{define "page-content"}}
+{{$phone := .Value "onestepgps_phone"}}
+<main style="background-image: url('./images/reviews-header.png');" class="main-page-header reviews-page landing">
+    <div class="hidden row h-100">
+        <div class="hidden section align-self-center">
+            <div class="hidden row">
+                <h1 class="hidden bold text-center p-0">Reviews</h1>
+            </div>
+            <div class="row justify-content-evenly">
+
+                <div class="col col-12 col-md-6 text-center">
+                    <div class="hidden justify-content-center align-items-center d-flex">
+                        <div class="hidden " style="text-align: end;">
+                            <img alt="Reviews leaves icon" onerror="this.src='./images/group.png'"
+                                 src="./images-webp/group.webp"
+                                 class="hidden rating-image" style="opacity: 0.8;">
+                        </div>
+                        <div class="hidden">
+                            <div>
+                                <div class="hidden stars-container review-stars text-center">
+                                    <img alt=""
+                                         src="/images/star-3.svg"
+                                         class="hidden">
+                                    <img alt=""
+                                         src="/images/star-3.svg"
+                                         class="hidden">
+                                    <img alt=""
+                                         src="/images/star-3.svg"
+                                         class="hidden">
+                                    <img alt=""
+                                         src="/images/star-3.svg"
+                                         class="hidden">
+                                    <img alt=""
+                                         src="/images/star-3.svg"
+                                         class="hidden">
+                                </div>
+                            </div>
+                            <div class="pb-25">
+                                <div class="hidden text-center" style="color:#fff">
+                                    Overall Satisfaction Rating
+                                </div>
+                                <div class="hidden text-center" style="color:#fff">
+                                    1000+ Ratings
+                                </div>
+                                <div class="hidden text-center" style="color:#fff">
+                                    15000+ Customers
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="hidden " style="text-align: start;">
+                            <img alt="Reviews leaves icon" onerror="this.src='./images/group2.png'"
+                                 src="./images-webp/group2.webp"
+                                 class="hidden rating-image" style="opacity: 0.8;">
+                        </div>
+                    </div>
+                    <div>
+                        <img alt="Capterra Best Value for Fleet Management 21-Oct" title="Best Value Badge"
+                             style="width: 140px; border: 0"
+                             src="https://capterra.s3.amazonaws.com/assets/images/gdm-badges/CAP_Crowd-Badge_BestValue_2021_Full-Color.png">
+                    </div>
+                </div>
+                <div class="col order-md-first d-flex justify-content-center">
+                    <img src="./images/inc5000.png" class="review-page-image" alt="Ranked Number 199 on Inc 5000">
+                </div>
+                <div class="col order-last  d-flex justify-content-center">
+                    <img src="./images-webp/shopperapproved.webp" class="review-page-image"
+                         alt="Shopper Approved over 1000 5-star reviews">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<main class="main-review skew-less" style="background-color: white;">
+    <div class="hidden row h-100">
+        <div class="hidden unskew-less review-wrapper">
+            <div class="all-reviews" id="all-reviews">
+                {{ template "templates/review-extension.template.html" .}}
+            </div>
+            <div class="hidden row justify-content-between ">
+                <div class="hidden col-sm">
+                    <div class="hidden button-div text-center">
+                        <a id="expandReviewsBtn" onclick="expandReviews()" class="hidden button-secondary"
+                           target="_blank">
+                            See more reviews
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let reviewsExtension = document.getElementsByClassName("review-extension");
+        for (let i = 0; i < 12; i++) {
+            reviewsExtension[i].style.display = "block";
+        }
+        let totalReviews = reviewsExtension.length;
+        let reviewsShowing = 12;
+        let expandBtn = document.getElementById("expandReviewsBtn");
+
+        function expandReviews() {
+            if (reviewsShowing >= totalReviews) {
+                expandBtn.href = "https://www.shopperapproved.com/reviews/onestepgps.com"
+            }
+            if (reviewsShowing < totalReviews) {
+                showMoreReviews();
+            }
+            if (reviewsShowing >= totalReviews) {
+                expandBtn.innerHTML = "See all reviews on Shopper Approved";
+            }
+        }
+
+        function showMoreReviews() {
+            if (reviewsShowing + 12 <= totalReviews) {
+                reviewsShowing += 12;
+            } else {
+                reviewsShowing += (totalReviews - reviewsShowing);
+            }
+            for (var i = reviewsShowing - 12; i < reviewsShowing; i++) {
+                console.log("here")
+                reviewsExtension[i].style.display = "block";
+            }
+
+        }
+    </script>
+</main>
+<main class="main-auto py-30">
+    <div class="hidden row h-100 ">
+        <div class="hidden section align-self-center">
+            <div class="hidden blue-grad row "  style="background: linear-gradient(270deg,#0095e9 0,#3db2f4 100%);" >
+                <div class="hidden col-lg-7 col-sm 12 align-self-center row-pad">
+                    <div class="subtitle-white">
+                        There's a reason why people love us
+                    </div>
+                    <div class="hidden row m-0 ">
+                        <div class="hidden h3-subtitle">
+                            Give us a call and see why thousands of smart companies all around the US choose
+                            OneStepGPS.com.
+                        </div>
+                    </div>
+                    <div class="hidden row">
+                        <div class="hidden row button-div pl-10-p pt-0">
+                            <a href="tel:{{$phone}}" class="hidden button-primary">
+                                <img alt="Phone icon" onerror="this.src='./images/icon-phone@3x.png'"
+                                     src="./images-webp/icon-phone@3x.webp" class="hidden iconphone">
+                                {{FormatPhone $phone}}
+                            </a>
+                            <a class="hidden button-secondary chat-button">
+                                <img alt="Chat with us" onerror="this.src='./images/comment-alt-dots-3.png'"
+                                     src="./images-webp/comment-alt-dots-3.webp" class="hidden comment-alt-dots3">
+                                Chat with us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden col-lg-5 col-sm 12 mobile-hidden text-right align-self-center">
+                    <img onerror="this.src='./images/dashboard-screen.png'"
+                         src="./images-webp/dashboard-screen.webp" class="hidden dashboard-screen"
+                         alt="Fleet tracking dashboard screen">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+{{end}}

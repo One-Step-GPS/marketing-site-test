@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ template "templates/header-tags.template.html" .}}
+    <title>Privacy Policy - {{ .CompanyConfig.CompanyNameDotCom }}</title>
+    <meta
+      name="description"
+      content="This privacy policy for {{ .CompanyConfig.CompanyName }} has been compiled to better serve those who are concerned with how their 'Personally Identifiable Information' (PII) is being used online."
+    />
+  </head>
+
+  <body onload="animateHTML();" style="background-color: #f5f7fa">
+    <!-- Define page content for privacy policy, it will either be rendered as a part of the navbar template or as a the page body for white labels.
+      If this is a marketing host, hide header and footer -->
+    {{if eq .CompanyConfig.CompanyName "One Step GPS"}} {{ template
+    "templates/navbar.template.html" .}} {{else}} {{block "page-content" .}}
+    {{end}} {{end}} {{define "page-content"}}
+    <main
+      style="
+        background-image: url('./images/careers.png');
+        background-color: transparent;
+      "
+      class="main-page-header landing"
+    >
+      <div class="hidden row h-100">
+        <div class="hidden section align-self-center">
+          <div class="hidden row">
+            <h1 class="hidden bold text-center">Privacy Policy</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main class="main-auto" style="background-color: #f5f7fa">
+      <div class="hidden row h-100">
+        <div class="hidden section align-self-center">
+          <div class="hidden row-pad">
+            <div
+              class="hidden row justify-content-md-center justify-content-sm-start"
+            >
+              <h2 class="hidden p-0 mw-60">Our Privacy Policy</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main class="main-auto">
+      <div class="hidden row h-100">
+        <div class="hidden section align-self-center">
+          <div class="hidden row row-pad">
+            <div class="paragraph-text row-card">
+              If you are a {{ .CompanyConfig.CompanyName }} customer or a
+              visitor to our website, this policy applies to you.
+              <br /><br />
+              <div class="privacy-header-blue">Our responsibilities</div>
+              <div class="privacy-tab">
+                We will inform you, by publishing this Privacy Policy, about how
+                we collect, use, process and store your data.
+                <br />
+                If the way in which we collect, use, process or store your data
+                changes, we will inform you of the changes by publishing updates
+                to this policy. If the updates are material, we will notify you
+                as required by applicable law.
+              </div>
+              <br /><br />
+              <div class="privacy-header-blue">Your responsibilities</div>
+              <div class="privacy-tab">
+                Read this Privacy Policy.
+                <br />
+                If you are our customer, please also check our
+                <a href="/terms-and-conditions">Terms and Conditions</a> or any
+                signed agreement between us, as these may contain further
+                details on how we collect and process your data.
+                <br />
+                If you provide us with personal information about other people,
+                or if others give us your information, we will only use that
+                information for the specific reason for which it was provided to
+                us. By submitting the information, you confirm that you have the
+                right to provide us with the data and to allow us to collect,
+                use, process and store it.
+                <br />
+                We will notify you of important updates to this policy. It is
+                your responsibility to read them.
+              </div>
+              <br /><br />
+              <div class="privacy-header-green">
+                When and how we collect data
+              </div>
+              When you visit our web site or use our products or services, we
+              collect data. Sometimes you provide us with data, sometimes data
+              about you is collected automatically.
+              <br /><br />
+              <div class="privacy-header-blue">
+                We collect your data automatically when you:
+              </div>
+              Browse any page of our web site, use the chat feature of our web
+              site, request a demo, use our products or services, and when you
+              contact us for support, or when we send emails to you.
+              <br /><br />
+              <div class="privacy-header-blue">
+                You give us your data when you:
+              </div>
+              Opt-in to marketing messages, use the chat feature of our web
+              site, request a demo, place an order, use our products or
+              services, contact us for support, send us emails, and when we call
+              you or you call us.
+              <br /><br/>
+              You may also choose to give us your data when you engage with us
+              on social media or other online forums, respond to a marketing
+              program or promotion, when you discuss a potential business
+              relationship with us, or when you give us your business card or
+              contact details at an event such as a trade show.
+              <br /><br />
+              <div class="privacy-header-blue">
+                If you give us someone else’s data:
+              </div>
+              Please only provide another person’s personal data to us if you
+              have their permission. If you later discover that you do not have
+              their permission, please inform us immediately.
+              <br /><br />
+              <div class="privacy-header-blue">
+                We may collect data from other sources
+              </div>
+              We may supplement your data with data that we receive from third
+              parties, such as through a referral program. If the products or
+              services that you use are offered by a third party, we may receive
+              your data from them. The data that we receive is subject to this
+              policy, but the third party’s privacy policy will control how they
+              use your data.
+              <br /><br />
+              <div class="privacy-header-green">Types of data we collect</div>
+              <div class="privacy-header-blue">Contact details</div>
+              Your name, address, telephone number, and email address.
+              <br /><br />
+              <div class="privacy-header-blue">Financial information</div>
+              We collect all details of our financial transaction when you place
+              an order through our web site. This may include your bank account
+              number, credit card number and CVV, or debit card details that you
+              provide to pay for our products and services.
+              <br /><br />
+              <div class="privacy-header-blue">
+                Data from your users' use of our products and services
+              </div>
+              Your customers and their street addresses, your users and their
+              home and work addresses, your vehicles and their VIN numbers,
+              device names, telematics device identification numbers, license
+              plate numbers, the routes and places visited by your vehicles and
+              their drivers, computer data from vehicles, miles traveled, time
+              spent in transit and idle, camera recordings, your employees’ and
+              users' names, phone numbers, email addresses and employers, your
+              drivers’ routes, appointments, and business data entered into our
+              products by your employees or users or collected using our
+              devices.
+              <br /><br />
+              <div class="privacy-header-blue">Data that identifies you</div>
+              Your IP address, login information, browser type and version, time
+              zone setting, browser plug-in types, geolocation information about
+              where you might be, operating system and version.
+              <br /><br />
+              <div class="privacy-header-blue">
+                Data on how you use our web site
+              </div>
+              Your URL clickstreams (the path you take through our site),
+              products/services viewed, page response times, download errors,
+              how long you stay on our pages, what you do on those pages, how
+              often, and other actions.
+              <br /><br />
+              <div class="privacy-header-blue">What about sensitive data?</div>
+              We collect precise geolocation data (within 1,750 feet or less)
+              about your vehicles in order to provide our services to you. We do
+              not sell geolocation data or use it for advertising purposes. We
+              do not collect any other “sensitive data” (like racial or ethnic
+              origin, political opinions, religious/philosophical beliefs, union
+              membership, genetic data, biometric data, health data, data about
+              your sex life or orientation, or criminal history) except when we
+              have your specific consent, or when the law requires us to. We ask
+              that you not provide us with sensitive data or use our products to
+              process sensitive data.
+              <br /><br />
+              <div class="privacy-header-blue">What about children’s data?</div>
+              {{ .CompanyConfig.CompanyName }} is primarily a
+              business-to-business service directed to and intended for use only
+              by those who are 18 or over. We do not target {{
+              .CompanyConfig.CompanyName }} at children, and we do not knowingly
+              collect any personal data from any person under 13 years old.
+              <br /><br />
+              <div class="privacy-header-green">
+                How and why we use your data
+              </div>
+              Data protection laws applicable in some places provide that we can
+              only use your data for certain reasons and when we have a legal
+              basis to do so. Here are the reasons for which we process your
+              data:
+              <br /><br />
+              <div class="privacy-header-blue">
+                Operating our products and services
+              </div>
+              Managing your use of our products and services, login and
+              authentication, remembering your settings, processing payments,
+              hosting and back-end infrastructure.
+              <br /><br />
+              <div class="privacy-header-blue">
+                Improving our products and services
+              </div>
+              Testing features, interacting with feedback platforms and
+              questionnaires, managing landing pages, heat mapping our site,
+              traffic optimization and data analysis and research, including
+              profiling and the use of machine learning and other techniques
+              using your data.
+              <br /><br />
+              <div class="privacy-header-blue">Customer support</div>
+              Notifying you of any changes to our service, solving issues via
+              live chat support, phone or email including any bug fixes or
+              scheduled downtime.
+              <br /><br />
+              <div class="privacy-header-blue">
+                To enforce our rights, the rights of others, or to comply with
+                the law
+              </div>
+              Enforcing our rights under our
+              <a href="/terms-and-conditions">Terms and Conditions</a> or any
+              other agreements between us, to otherwise protect our legal rights
+              or those of our employees, customers or others, or to comply with
+              a court order, legal process, or government request that we are
+              legally required to comply with. <br /><br />
+              <div class="privacy-header-blue">
+                Marketing purposes (with your consent)
+              </div>
+              Sending you emails and messages about new features, products and
+              services, and content. If you have previously given consent to
+              send you marketing emails, you can withdraw your consent by
+              emailing us at
+              <a href="mailto:{{ .CompanyConfig.LegalEmail }}"
+                >{{ .CompanyConfig.LegalEmail }}</a
+              >. <br /><br />
+              <div class="privacy-header-green">Your privacy rights</div>
+              <div class="privacy-header-blue">
+                You can choose not to provide us with personal data
+              </div>
+              If you choose to do this, you can continue to use the website and
+              browse its pages, but we will not be able to process transactions
+              or provide you with our services without personal data.
+              <br /><br />
+              <div class="privacy-header-blue">
+                You can turn off cookies in your browser
+              </div>
+              You can block cookies by activating a setting on your browser
+              allowing you to refuse cookies. You can also delete cookies
+              through your browser settings. If you turn off cookies, you can
+              continue to use the website and browse its pages, but {{
+              .CompanyConfig.CompanyName }} and certain services (like Intercom)
+              will not work effectively.
+              <br /><br />
+              <div class="privacy-header-blue">
+                You can ask us not to use your data for marketing
+              </div>
+              We will inform you (before collecting your data) if we intend to
+              use your data for marketing and if third parties are involved. You
+              can opt out from marketing by emailing us at
+              <a href="mailto:{{ .CompanyConfig.LegalEmail }}"
+                >{{ .CompanyConfig.LegalEmail }}</a
+              >. <br /><br />
+              <div class="privacy-header-blue">
+                You have the right to access information we hold about you
+              </div>
+              This includes the right to ask us to provide information about:
+              <ul>
+                <li>the types of data we collect</li>
+                <li>why we collect it</li>
+                <li>how we use it</li>
+                <li>which third parties may have access to it</li>
+                <li>
+                  how long the data will be stored or the criteria used to
+                  determine that period
+                </li>
+              </ul>
+              We will do our best to provide you with the information within one
+              month of your request.
+              <br /><br />
+              <div class="privacy-header-blue">
+                You may ask us to correct any inaccurate personal data about you
+              </div>
+              We will do our best to make the requested changes to your
+              information within one month of your request.
+              <br /><br />
+              <div class="privacy-header-blue">
+                You can object to us using your data to profile you or make
+                automated decisions about you
+              </div>
+              We may use your data to determine whether we should let you know
+              information that might be relevant to you (for example, tailoring
+              emails to you based on your behavior). Otherwise, the only
+              circumstances in which we will do this is to allow you to use our
+              products and services.
+              <br /><br />
+              <div class="privacy-header-blue">
+                You will not receive your data if you stop using our products
+              </div>
+              If you cancel your service or we suspend it for non-payment, you
+              will not be entitled to receive the data that is stored within our
+              system or on the devices that you return to us. You will need to
+              specifically request that the data is returned to you as described
+              under “Our responsibilities as a data controller or service
+              provider,” below.
+              <br /><br />
+              <div class="privacy-header-blue">
+                You have the right to be “forgotten”
+              </div>
+              You can do this by asking us to erase any personal data we hold
+              about you or any consumer if it is no longer necessary for us to
+              hold the data for purposes of your use of our products or
+              services. To the extent that you have submitted your personal data
+              when placing an order, it is necessary for us to hold that data to
+              enable you to use our products and services.
+              <br /><br />
+              <div class="privacy-header-blue">
+                If you have a concern about how we are using your data
+              </div>
+              Please contact us at 818-659-2031 between the hours of 8am and 5pm
+              Pacific Time, or email
+              <a href="mailto:{{ .CompanyConfig.LegalEmail }}"
+                >{{ .CompanyConfig.LegalEmail }}</a
+              >
+              if you have a concern about how we are using your data, so that we
+              can try to address your concerns. <br /><br />
+              <div class="privacy-header-green">
+                How secure is the data we collect?
+              </div>
+              We use physical, electronic, and managerial measures to safeguard
+              and secure the information we collect. Our security measures take
+              into account:
+              <ul>
+                <li>The amount, nature, and sensitivity of your data</li>
+                <li>
+                  Potential harm to you from unauthorized use or disclosure of
+                  your data
+                </li>
+                <li>
+                  The purposes for which we process your data and whether we can
+                  achieve them without processing your data
+                </li>
+                <li>Legal requirements</li>
+              </ul>
+              <br />
+              <div class="privacy-header-blue">Please remember, however:</div>
+              <ul>
+                <li>
+                  You provide personal data and use our web site at your own
+                  risk
+                </li>
+                <li>
+                  No data transmission is guaranteed to be 100% secure, so you
+                  should be careful when sharing any personal data over the
+                  internet
+                </li>
+                <li>
+                  Information you share over the internet could be accessible by
+                  the public due to causes outside of our control and could be
+                  used by others without your consent
+                </li>
+                <li>
+                  You are responsible to protect your username and password:
+                  keep them secret and secure
+                </li>
+                <li>
+                  If you believe your privacy has been breached, please contact
+                  us immediately at 818-659-2031 or email
+                  <a href="mailto:{{ .CompanyConfig.LegalEmail }}"
+                    >{{ .CompanyConfig.LegalEmail }}</a
+                  >
+                </li>
+              </ul>
+              <div class="privacy-header-green">
+                How long do we store your data?
+              </div>
+              We will delete and stop actively using any personally identifiable
+              information about you or any individual who has requested that
+              their information be removed, promptly after you ask us to do so.
+              We store your personally identifiable data for no longer than is
+              necessary to achieve the purpose of the processing. We may store
+              data that is not personally identifiable information for longer
+              periods.
+              <br /><br />
+              <div class="privacy-header-green">
+                Third parties who may receive your data
+              </div>
+              Sometimes we may need to share your data with third parties,
+              including device and equipment manufacturers and our integration
+              partners, who are identified on our Integrations page. For
+              example, we submit geolocation data to Google to improve
+              geocoding. We store data on Amazon servers, and have partnerships
+              with SpeedGauge, Inc., Rarestep, Inc. (providers of Fleetio), and
+              ServiceTitan, Inc., among others. We may share your data with
+              Twilio to facilitate sending you text messages.
+              <br /><br />
+              We may share your driving-related data with your insurance
+              carrier, either with your permission or if you have entered into
+              an arrangement with your insurance carrier to provide or collect
+              your driving data.
+              <br /><br />
+              Your data is shared with third parties only when necessary and
+              according to the safeguards and good practices detailed in this
+              Privacy Policy, but third parties’ use and processing of your data
+              will be governed by those companies’ privacy policies.
+
+              <br /><br />
+
+              <div class="privacy-header-green">
+                Using our products and services for an organization
+              </div>
+              If our products or services are provided to you by or through your
+              employer or another organization, that organization will have
+              access to your data. If you ask us to delete or correct your data,
+              any data retained by the organization will not be deleted or
+              corrected. You must direct your request to the organization also.
+              <br /><br />
+              <div class="privacy-header-green">Cookies</div>
+              We use cookies. Unless you adjust your browser settings to refuse
+              cookies, we (and these third parties) will issue cookies when you
+              interact with our site or our services. These may be “session”
+              cookies meaning they delete themselves when you leave our site, or
+              “persistent” cookies which do not delete themselves and help us
+              recognize you when you return so we can provide a custom
+              experience.
+              <br /><br />
+              <div class="privacy-header-blue">How can I block cookies?</div>
+
+              You can block cookies by activating a setting on your browser
+              allowing you to refuse cookies. You can also delete cookies
+              through your browser settings. If you use your browser settings to
+              disable, reject, or block cookies (including essential cookies),
+              certain parts of our website will not function fully. In some
+              cases, our website may not be accessible at all. Please note that
+              where third parties use cookies, we have no control over how those
+              third parties use those cookies.
+              <br /><br />
+              <div class="privacy-header-green">
+                Our Responsibilities as a Controller or Service Provider
+              </div>
+              <ul>
+                <li>
+                  We act solely as a service provider with respect to personal
+                  information.
+                </li>
+                <li>We do not sell personal information.</li>
+                <li>
+                  We do not retain, use, or disclose personal information for
+                  any purpose other than for the specific purpose of providing
+                  you with our products and services, and we do not retain, use,
+                  or disclose personal information for any purpose outside of
+                  our direct business relationship with you.
+                </li>
+                <li>
+                  If you or a consumer whose data you have provided asks for
+                  access to their personal data, information about the
+                  categories of sources from which it is collected, or
+                  information about the categories or specific pieces of
+                  personal data, we will cooperate, including by providing the
+                  requested information in a portable and, to the extent
+                  technically feasible, readily useable format.
+                </li>
+                <li>
+                  If you or a consumer whose data you have provided asks for us
+                  to delete or correct personal data, we will cooperate with
+                  your request to the extent legally possible. If we are unable
+                  to delete or correct personal data for a valid legal reason,
+                  we will tell you why, we will only retain the personal data
+                  for that reason, and we will delete the personal data after
+                  the reason for keeping it no longer exists.
+                </li>
+                <li>
+                  If applicable under state law, you have the right to appeal
+                  our refusal to comply with your request with respect to your
+                  personal data.
+                </li>
+              </ul>
+              <div class="privacy-header-green">For residents of the EU</div>
+              <ul>
+                <li>
+                  Our products and services are not enabled for use in the EU.
+                  If you are a resident of the EU, we act as the “data
+                  controller” (as that term is defined in the European General
+                  Data Protection Regulation, or GDPR) of personal data. This
+                  means we determine how and why your data is processed
+                </li>
+                <li>
+                  We process data in the United States and third countries
+                  outside of the EU that are not the subject of an Adequacy
+                  Decision (as those terms are defined in the GDPR). By
+                  submitting your personal data, you agree that we can transfer,
+                  process and store your personal data anywhere in the world.
+                </li>
+              </ul>
+              <div class="privacy-header-green">Changes to this policy</div>
+              If this policy changes, we will post any changes on this page. We
+              will notify you of material changes if required by law. Please
+              check back to ensure that you are made aware of any changes.
+              <br /><br />
+              <div class="privacy-header-blue">
+                This policy was last updated on July 18, 2023
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    {{end}}
+  </body>
+</html>

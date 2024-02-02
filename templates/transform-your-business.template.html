@@ -1,0 +1,56 @@
+{{$phone := .Value "onestepgps_phone"}}
+<div class="row h-100">
+  <div class="section align-self-center">
+    <div class="row-pad py-5">
+      <div class="col-sm">
+        <div class="row justify-content-md-center justify-content-sm-start">
+          <h2 class="p-0 z-1" style="text-align: center">
+            Transform your business today
+          </h2>
+        </div>
+        <img
+          alt="underline"
+          onerror="this.src='./images/underline-2.png'"
+          src="./images-webp/underline-2.webp"
+          class="underline-graphic-image-2 mobile-hidden"
+          loading="lazy"
+        />
+        <div class="row">
+          <div class="h2-subtitle text-center">
+            Want to know more about the best GPS ﬂeet tracking solution on the
+            market?<br /><br />
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="button-div p-0 text-center row justify-content-center">
+            <a
+              href="tel:{{$phone}}"
+              class="button-primary"
+              aria-hidden="true"
+              role="presentation"
+            >
+              <img
+                alt="Phone icon"
+                onerror="this.src='./images/icon-phone@3x.png'"
+                src="./images-webp/icon-phone@3x.webp"
+                class="iconphone"
+                loading="lazy"
+              />
+              {{FormatPhone $phone}}
+            </a>
+            <a class="button-secondary chat-button">
+              <img
+                alt="Chat with us"
+                onerror="this.src='./images/comment-alt-dots-3.png'"
+                src="./images-webp/comment-alt-dots-3.webp"
+                class="comment-alt-dots3"
+                loading="lazy"
+              />
+              Chat with us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
