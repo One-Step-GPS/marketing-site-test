@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex" />
+    <!--Font-->
+    <link rel="preload" href="https://use.typekit.net/vam0ype.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/vam0ype.css"></noscript>
+    <link rel="preload" href="/build/css/stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="/build/css/stylesheet.css" rel="stylesheet"></noscript>
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon">
+    <script defer src="/build/js/bundle.js"></script>
+    <!--For Google consent mode to work, scripts must be loaded in this exact order:
+     Google Consent Mode -> Google Tag Manager -> Cookiebot CMP (with automatic cookie blocking)
+    -->
+    <!-- Google Consent Mode -->
+    <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+      });
+      gtag("set", "ads_data_redaction", true);
+      gtag("set", "url_passthrough", true);
+    </script>
+    <!-- End Google Consent Mode-->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+        j.defer = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-THZDMWJ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Cookiebot CMP-->
+<!--    <script-->
+<!--            id="Cookiebot"-->
+<!--            src="https://consent.cookiebot.com/uc.js"-->
+<!--            data-cbid="f0919581-24d6-44bd-bc28-79d1d0f7339b"-->
+<!--            data-blockingmode="auto"-->
+<!--            type="text/javascript"-->
+<!--    ></script>-->
+    <!-- End Cookiebot CMP -->
+
+    <!-- lazy load polyfills for older browsers-->
+    <script>
+      window.addEventListener("load", function () {
+        if (!Array.prototype.includes) {
+          // Load polyfill.io here
+          const script = document.createElement("script");
+          script.src = "/build/js/polyfill.js";
+          document.head.appendChild(script);
+        }
+      });
+    </script>
+    <title>GPS Device Installation Instructions - OneStepGPS.com</title>
+    <meta
+      name="description"
+      content="One Step GPS Device Installation Instructions. Complete walkthrough for setting up your tracking devices."
+    />
+
+  </head>
+
+  <body onload="animateHTML();" style="background-color: #f5f7fa">
+    {{ template "templates/navbar.template.html" .}} {{define "page-content"}}
+
+    <main
+      style="
+        background-image: linear-gradient(
+            to right,
+            #0c3f6e,
+            rgba(12, 75, 134, 0.36)
+          ),
+          url('./images/gradientfleet.png');
+        background-color: transparent;
+        z-index: -1;
+      "
+      class="main-page-header landing"
+    >
+      <div class="hidden row h-100">
+        <div class="hidden section align-self-center">
+          <div class="hidden row">
+            <h1 class="hidden bold text-center">Installation</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main class="main-auto skew-less mb-120" style="background-color: #f5f7fa">
+      <div class="hidden row h-100">
+        <div class="hidden unskew-less section">
+          <div class="hidden row-pad">
+            <div class="hidden row-pad">
+              <div
+                class="hidden row justify-content-md-center justify-content-sm-start"
+              >
+                <span class="camera-gallery-title">
+                  Device Installation Manuals
+                </span>
+              </div>
+
+              <div class="hidden row">
+                <div class="hidden separator"></div>
+              </div>
+              <div class="hidden row justify-content-md-center">
+                <div class="col-sm">
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images/asset-device-5.png"
+                        alt="OBD Plug-in GPS Tracker"
+                        width="150"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a
+                        href="./images/pdf/Installation_OBDII_GPS_Tracker.pdf"
+                        download
+                        >OBD Plug-in Installation</a
+                      >
+                    </div>
+                  </div>
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images/asset-device-6.png"
+                        alt="Hardwired GPS Tracker"
+                        width="150"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a
+                        href="./images/pdf/Installation_Hardwired_GPS_Tracker.pdf"
+                        download
+                        >Hardwired Unit Installation</a
+                      >
+                    </div>
+                  </div>
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images-webp/asset-device-1.webp"
+                        alt="Rugged Hardwired GPS Tracker"
+                        width="150"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a href="./images/pdf/Installation_LMU-1230.pdf" download
+                        >Rugged Hardwired Unit Installation</a
+                      >
+                    </div>
+                  </div>
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images/asset-device-7.jpg"
+                        alt="Starter Disable Device"
+                        width="150"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a
+                        href="./images/pdf/Installation_Starter_Disable.pdf"
+                        download
+                        >Starter Disable Installation (Hardwired)</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images/asset-device-8.png"
+                        alt="Temperature Sensor Device"
+                        width="150"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a
+                        href="./images/pdf/Installation_Temperature_Sensor.pdf"
+                        download
+                        >Temperature Sensor Installation (Hardwired)</a
+                      >
+                    </div>
+                  </div>
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images/calamp.png"
+                        alt="Radio Frequency Identification Device"
+                        width="150"
+                        height="150"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a
+                        href="./images/pdf/Installation_Buzzer_&_Driver_ID.pdf"
+                        download
+                        >RFID Installation (Hardwired)</a
+                      >
+                    </div>
+                  </div>
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images-webp/asset-device-4.webp"
+                        alt="Solar Panel GPS Tracker"
+                        width="150"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a
+                        href="./images/pdf/Installation_Solar_XT49.pdf"
+                        download
+                        >Solar Panel Unit Installation</a
+                      >
+                    </div>
+                  </div>
+                  <div class="hidden row align-items-center py-10">
+                    <div class="hidden">
+                      <img
+                        src="./images-webp/asset-device-2.webp"
+                        alt="Extended Battery Asset Tracker"
+                        width="150"
+                        height="130"
+                      />
+                    </div>
+                    <div class="hidden big-link pl-15">
+                      <a
+                        href="./images/pdf/Installation_2830_Asset_&_Trailer_Tracker.pdf"
+                        download
+                      >
+                        Extended Battery Asset Tracker</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main class="main-auto mb-120" style="background-color: #f5f7fa">
+      <div class="hidden row h-100">
+        <div class="hidden section">
+          <div
+            class="hidden row justify-content-md-center justify-content-sm-start"
+          >
+            <span class="camera-gallery-title">
+              Device Installation Videos
+            </span>
+          </div>
+
+          <div class="hidden row">
+            <div class="hidden separator"></div>
+          </div>
+          <!-- Nav tabs -->
+          <nav class="navbar" style="width: 100%; padding-left: 0; padding-right: 0">
+            <ul
+              id="nav-tabs"
+              class="integrations-nav nav nav-pills nav-fill"
+              style="width: 100%"
+            >
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link active"
+                  style="border: transparent"
+                  id="all-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#all"
+                  type="button"
+                  role="tab"
+                  aria-controls="all"
+                  aria-selected="true"
+                >
+                  All
+                </button>
+              </li>
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="power-take-off-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#power-take-off"
+                  type="button"
+                  role="tab"
+                  aria-controls="power-take-off"
+                  aria-selected="false"
+                >
+                  Power Take Off
+                </button>
+              </li>
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="starter-disable-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#starter-disable"
+                  type="button"
+                  role="tab"
+                  aria-controls="starter-disable"
+                  aria-selected="false"
+                >
+                  Starter Disable
+                </button>
+              </li>
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="rfid-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#rfid"
+                  type="button"
+                  role="tab"
+                  aria-controls="rfid"
+                  aria-selected="false"
+                >
+                  RFID Scanner
+                </button>
+              </li>
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="temp-sensor-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#temp-sensor"
+                  type="button"
+                  role="tab"
+                  aria-controls="temp-sensor"
+                  aria-selected="false"
+                >
+                  Temp Sensor
+                </button>
+              </li>
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="hardwired-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#hardwired"
+                  type="button"
+                  role="tab"
+                  aria-controls="hardwired"
+                  aria-selected="false"
+                >
+                  Hardwired Device
+                </button>
+              </li>
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="rugged-hardwired-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#rugged-hardwired"
+                  type="button"
+                  role="tab"
+                  aria-controls="rugged-hardwired"
+                  aria-selected="false"
+                >
+                  Rugged hardwired Device
+                </button>
+              </li>
+              <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="hybrid-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#hybrid"
+                  type="button"
+                  role="tab"
+                  aria-controls="hybrid"
+                  aria-selected="false"
+                >
+                  Hybrid Battery
+                </button>
+              </li>
+                <li class="nav-item pb-2" role="presentation">
+                <button
+                  class="nav-link"
+                  style="border: transparent"
+                  id="dash-camera-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dash-camera"
+                  type="button"
+                  role="tab"
+                  aria-controls="dash-camera"
+                  aria-selected="false"
+                >
+                  Dash Camera
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <div
+            class="embed-responsive embed-responsive-16by9 cookieconsent-optin-marketing"
+            style="max-width: 800px; margin: auto"
+          >
+            <iframe
+              id="youtube-player"
+              class="embed-responsive-item"
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/vbeEHqk8BEY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+<!--          <div-->
+<!--                  class="cookieconsent-optout-marketing row flex-column align-items-center justify-content-center rounded text-align-center"-->
+<!--                  style="width: 100%; height: 315px; background-color: grey"-->
+<!--          >-->
+<!--            <i-->
+<!--                    class="fa-solid fa-eye-slash fa-xl mb-3"-->
+<!--                    style="color: #ffffff"-->
+<!--            ></i>-->
+<!--            <p class="text-color-white text-lg">-->
+<!--              To view this video you must accept marketing cookies-->
+<!--            </p>-->
+<!--            <button onclick="Cookiebot.renew()" class="btn btn-primary">-->
+<!--              Opt-in to cookies-->
+<!--            </button>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script>
+  //tab content
+  let player = document.getElementById("youtube-player");
+
+  //list of all tabs
+  let triggerTabList = [].slice.call(
+    document.querySelectorAll("#nav-tabs button")
+  );
+
+  //the video links that correspond to each installation tab, in sequential order
+  let video_links = [
+    "https://www.youtube-nocookie.com/embed/vbeEHqk8BEY", //all instruction videos
+    "https://www.youtube-nocookie.com/embed/6sCMuzLCYSw", //Power TakeOff,
+    "https://www.youtube-nocookie.com/embed/pnVkJO8unQA", //Starter Disable,
+    "https://www.youtube-nocookie.com/embed/7UEg3w2HvyM", //RFID,
+    "https://www.youtube-nocookie.com/embed/h8BbysBP640", //Temp Sensor,
+    "https://www.youtube-nocookie.com/embed/wGE8cBjvSWU", //Hardwired ,
+    "https://www.youtube-nocookie.com/embed/gETXz8mKIoM", //Rugged,
+    "https://www.youtube-nocookie.com/embed/pcjIJtFvnr8", //hybrid battery,
+    "https://www.youtube-nocookie.com/embed/TirGZPrmH0U ", //dash camera,
+  ];
+
+  //on load navigate to proper tab and video
+  const searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.has("video_tab")) {
+      //set first tab as active
+      triggerTabList[0].className = triggerTabList[0].className.replace(
+          " active",
+          ""
+      )
+
+      let index = parseInt(searchParams.get("video_tab"))
+
+      //set appropriate tab as active
+      triggerTabList[index].className += " active"
+
+      //update player src and scroll to player
+      player.src = video_links[index]
+      player.scrollIntoView()
+  }
+
+  //add listeners to set tabs as active
+  triggerTabList.forEach(function (triggerEl) {
+    triggerEl.addEventListener("click", function (e) {
+      e.preventDefault();
+      let index = 0;
+      for (let i = 0; i < triggerTabList.length; i++) {
+        triggerTabList[i].className = triggerTabList[i].className.replace(
+          " active",
+          ""
+        );
+        if (triggerTabList[i].id === e.currentTarget.id) {
+          index = i;
+        }
+      }
+
+      //update the params on tab click, so we have a unique link to video
+      let searchParams = new URLSearchParams(window.location.search);
+      searchParams.set("video_tab", index.toString());
+      let newRelativePathQuery =
+        window.location.pathname + "?" + searchParams.toString();
+      //replace so that navigating back does not add to stack
+      history.replaceState("/installation", "", newRelativePathQuery);
+      //set button active and replace active video
+      e.currentTarget.className += " active";
+      player.src = video_links[index];
+    });
+  });
+</script>
+
+<style>
+  .nav li::before {
+    display: none;
+  }
+
+  .nav-item button:focus {
+    outline: none;
+  }
+</style>
+{{end}}

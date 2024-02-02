@@ -1,8 +1,0 @@
--p1 https://www.onestepgps.com/ -V "if grep -iE \"TITLE\" \"$0\">/dev/null; then echo \"Match found at $0\"; fi"
-File generated automatically on Thu, 01 Feb 2024 17:23:53, do NOT edit
-
-To update a mirror, just launch httrack without any parameters
-The existing cache will be used (and modified)
-To have other options, retype all parameters and launch HTTrack
-To continue an interrupted mirror, just launch httrack without any parameters
-

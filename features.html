@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{ template "templates/header-tags.template.html" .}}
+    <title>Features - OneStepGPS.com</title>
+    <meta name="description"
+        content="One Step GPS makes GPS tracking accessible to every business. Real-time tracking 24 hours a day - 7 days a week, 100% web based, Email and text alerts, Unsafe driving alerts and much more.">
+</head>
+
+<body onload="animateHTML();" style="background-color: #f5f7fa;">
+    {{ template "templates/navbar.template.html" .}}
+    {{define "page-content"}}
+    {{$phone := .Value "onestepgps_phone"}}
+    <main style="background-image: url('./images/about.png'); background-color: transparent;"
+        class="main-page-header landing">
+        <div class="hidden row h-100">
+            <div class="hidden section align-self-center">
+                <div class="hidden row">
+                    <h1 class="hidden bold text-center">Features</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="main-auto main-overflow" style="background-color: #f5f7fa;">
+        <div class="hidden row h-100">
+            <div class="hidden section align-self-center">
+                <div class="hidden row-pad">
+                    <div class="hidden row   justify-content-md-center justify-content-sm-start">
+                        <h2 class="hidden p-0 row-confined">
+                            One Step GPS Makes GPS Tracking Accessible to Every Business
+                        </h2>
+                    </div>
+                    <div class="hidden row  justify-content-md-center justify-content-sm-start">
+                        <span class="hidden h2-subtitle p-0">
+                            One Step GPS makes it easy for you to effectively monitor your fleet and drivers, manage
+                            inappropriate driving behavior, and reduce insurance and vehicle repair costs.
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-12">
+                            <div class="paragraph-text p-20">
+                                With our easy-to-install GPS tracking technology, you no longer have to call drivers to
+                                find out where they are or worry about how to provide evidence to a customer that a
+                                driver was actually there.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="paragraph-text p-20">
+                                Our web-based software allows you to easily follow your vehicles turn-by-turn, gauge how
+                                long they have been stopped in a particular location, and view past travel history.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden col-sm">
+                        <div class="hidden row floating-div about row-card justify-content-center ie-reformat">
+                            <div class="hidden ">
+                                <div class="row py-10">
+                                    <div class="col-1"><img alt="Feature included"
+                                            onerror="this.src='./images/check-circle-3.png'"
+                                            src="./images-webp/check-circle-3.webp" width="21px"
+                                            class="hidden check-circle-3"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="features-title">Real-time tracking 24 hours a day, 7 days a week
+                                            </div>
+                                            <div class="paragraph-text">Access the real-time location of all your
+                                                vehicles whenever you need to. You can easily see who is available and
+                                                closest to a job site, allowing you to improve customer service with
+                                                accurate estimated arrival times.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-10">
+                                    <div class="col-1"><img alt="Feature included"
+                                            onerror="this.src='./images/check-circle-3.png'"
+                                            src="./images-webp/check-circle-3.webp" width="21px"
+                                            class="hidden check-circle-3"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="features-title">100% web based (desktop and mobile)
+                                            </div>
+                                            <div class="paragraph-text">As long as you have an Internet connection, you
+                                                can see where your vehicles are – no software required. You can also
+                                                download our <a
+                                                    href="https://apps.apple.com/us/app/one-step-gps-live-tracking/id1307133985">iPhone</a>
+                                                or <a
+                                                    href="https://play.google.com/store/apps/details?id=com.onestepgps.onestepgps">Android</a>
+                                                apps.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-10">
+                                    <div class="col-1"><img alt="Feature included"
+                                            onerror="this.src='./images/check-circle-3.png'"
+                                            src="./images-webp/check-circle-3.webp" width="21px"
+                                            class="hidden check-circle-3"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="features-title">Email and text alerts
+                                            </div>
+                                            <div class="paragraph-text">You can set up alerts to notify you if a vehicle
+                                                is moving with the ignition off (being towed or stolen), leaving certain
+                                                authorized work areas, entering and leaving a job site, or driving after
+                                                hours or on the weekends. You can see all routes, stops, addresses and
+                                                durations for up to three years.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-10">
+                                    <div class="col-1"><img alt="Feature included"
+                                            onerror="this.src='./images/check-circle-3.png'"
+                                            src="./images-webp/check-circle-3.webp" width="21px"
+                                            class="hidden check-circle-3"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="features-title">Unsafe driving alerts
+                                            </div>
+                                            <div class="paragraph-text">Poor driving behavior can be a risk to safety,
+                                                increase vehicle wear and tear, and impact your business’ reputation.
+                                                You can easily set up alerts for speeding, fast accelerations, harsh
+                                                braking or prolonged engine idling.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-10">
+                                    <div class="col-1"><img alt="Feature included"
+                                            onerror="this.src='./images/check-circle-3.png'"
+                                            src="./images-webp/check-circle-3.webp" width="21px"
+                                            class="hidden check-circle-3"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="features-title">Vehicle service reminders
+                                            </div>
+                                            <div class="paragraph-text">Our maintenance schedules and triggered
+                                                reminders help increase your vehicles’ longevity and reduce unnecessary
+                                                service costs. Receive alerts regarding upcoming service items for each
+                                                vehicle such as oil changes, tire rotations and fluid checks.
+                                                Notifications can be set on odometer readings, time intervals or hours
+                                                of service.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-10">
+                                    <div class="col-1"><img alt="Feature included"
+                                            onerror="this.src='./images/check-circle-3.png'"
+                                            src="./images-webp/check-circle-3.webp" width="21px"
+                                            class="hidden check-circle-3"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="features-title">Fuel cost monitoring
+                                            </div>
+                                            <div class="paragraph-text">Our technology allows you to track fuel
+                                                consumption, see the cost per mile, amount spent per trip or total cost
+                                                per month. By tracking fuel consumption, you can identify and resolve
+                                                discrepancies, such as driver behavior which may be increasing fuel
+                                                consumption (for example, speeding, fast accelerations, engine idling
+                                                and taking longer routes).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-10">
+                                    <div class="col-1"><img alt="Feature included"
+                                            onerror="this.src='./images/check-circle-3.png'"
+                                            src="./images-webp/check-circle-3.webp" width="21px"
+                                            class="hidden check-circle-3"></div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="features-title">No contracts or hidden fees
+                                            </div>
+                                            <div class="paragraph-text">No lock-in contracts or cancellation fees.
+                                                100-day full money back guarantee if you’re not satisfied.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img alt="" onerror="this.src='./images/dots-green.png'"
+                            src="./images-webp/dots-green.webp" class="hidden mobile-hidden Dots8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="main-spacer mobile-hidden">
+    </main>
+    <main class="main-auto">
+        <div class="hidden row h-100">
+            <div class="hidden section align-self-center">
+                <div class="hidden row-pad">
+                    <div class="hidden col-sm">
+                        <div class="hidden row justify-content-md-center justify-content-sm-start">
+                            <h2 class="hidden p-0 z-1 mw-75">
+                                One Step GPS: Transforming the GPS tracking industry, one step at a time <br><br>
+                            </h2>
+                        </div>
+                        <img alt="underline" onerror="this.src='./images/underline-image-5.png'"
+                            src="./images-webp/underline-image-5.webp"
+                            class="hidden underline-graphic-image-5 mobile-hidden">
+                        <div class="hidden row  justify-content-md-center justify-content-sm-start">
+                            <div class="hidden h2-subtitle">
+                                Want to know more about the best GPS ﬂeet tracking solution on the market?<br>Contact us
+                                today!<br><br>
+                            </div>
+                        </div>
+                        <div class="hidden row text-center">
+                            <div class="hidden button-div p-0 text-center row justify-content-center">
+                                <a href="tel:{{$phone}}" class="hidden button-primary">
+                                    <img alt="Phone icon" onerror="this.src='./images/icon-phone@3x.png'"
+                                        src="./images-webp/icon-phone@3x.webp" class="hidden iconphone">
+                                    {{FormatPhone $phone}}
+                                </a>
+                                <a class="hidden button-secondary chat-button">
+                                    <img alt="Chat with us" onerror="this.src='./images/comment-alt-dots-3.png'"
+                                        src="./images-webp/comment-alt-dots-3.webp" class="hidden comment-alt-dots3">
+                                    Chat with us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+        var check_for_ie =  /*@cc_on!@*/false || !!document.documentMode;
+        var rows_to_reformat = document.getElementsByClassName("ie-reformat");
+        for (var i = 0; i < rows_to_reformat.length; i++) {
+            if (check_for_ie == true) {
+                rows_to_reformat[i].classList.add("ie");
+            }
+        }
+
+    </script>
+
+</html>
+{{end}}

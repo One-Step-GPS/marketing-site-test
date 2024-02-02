@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ template "templates/header-tags.template.html" .}}
+    <title>Blog | Easy and Affordable GPS Tracking</title>
+    <meta name="description" content="Blog" />
+  </head>
+
+  <body onload="animateHTML();" style="background-color: #f5f7fa">
+    {{ template "templates/navbar.template.html" .}} {{define "page-content"}}
+    {{$phone := .Value "onestepgps_phone"}}
+
+    <!--hero image and title-->
+    <!--the blank-hero-on-mobile class will change the image on smaller screens-->
+    <main
+      style="
+        background-image: url('./images/blog/blog-hero.png');
+        background-color: transparent;
+      "
+      class="main-page-header landing"
+    >
+      <div class="hidden row h-100">
+        <div class="hidden section align-self-center">
+          <div class="hidden row">
+            <div class="col mx-auto text-center">
+              <h1 class="pt-mobile hidden bold text-center">Blog</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Image cards -->
+    <div class="main-auto pt-mobile pb-3" style="background: #f5f7fa">
+      <div
+        class="section py-5 row align-content-center"
+        style="justify-content: space-evenly"
+      >
+        {{ range $blogPostTile := .PaginatedData.PaginatedItems }}
+        <a
+          href="blog/{{ $blogPostTile.ArticlePath }}"
+          class="card slide-up-element h-100"
+          style="
+            max-width: 350px;
+            max-height: 471px;
+            color: #000000;
+            text-decoration: none;
+            margin-top: 15px;
+          "
+        >
+          <img
+            alt="{{ $blogPostTile.ThumbnailAltText }}"
+            src="./images/blog/{{ $blogPostTile.ThumbnailPath }}"
+            class="card-img-top"
+            height="563"
+            width="1000"
+            style="max-height: 192px"
+          />
+          <div class="card-body">
+            <div class="card-title font-weight-bold">
+              {{ $blogPostTile.Title }}
+            </div>
+            <small class="text-muted">{{ FormatDate $blogPostTile.PublishDate }}</small>
+            <hr />
+            <div class="card-text">
+              {{ $blogPostTile.PreviewText }}
+            </div>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+
+      {{ if gt .PaginatedData.TotalPages 1}}
+      <nav id="pagination_tabs" style="display: flex; justify-content: center;">
+        <ul class="pagination">
+          <li class="page-item">
+            <a
+              class="page-link"
+              :class="[displayed_pages[0] == 1 ? 'disabledLink' : '']"
+              :href="prev_link"
+              aria-label="Previous"
+            >
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+
+          <li v-for="i in displayed_pages" class="page-item">
+            <a class="page-link page-num-link" :class="[current_page == i ? 'activeLink' : '']" :href="'/blog?page=' + i">${i}</a>
+          </li>
+
+          <li class="page-item">
+            <a
+              class="page-link"
+              :class="[displayed_pages[displayed_pages.length - 1] >= total_pages ? 'disabledLink' : '']"
+              :href="next_link"
+              aria-label="Next"
+            >
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      {{end}}
+    </div>
+
+    <main class="h-600">
+      <div class="hidden row h-100 align-items-center">
+        <div class="hidden section">
+          <div class="hidden blue-grad row align-items-center mt-lg">
+            <div class="hidden col-lg-7 col-sm 12 row-pad">
+              <div class="hidden row">
+                <div class="heading-2">Ready to give us a shot?</div>
+              </div>
+              <div class="hidden row">
+                <div class="hidden h2-subtitle text-left">
+                  See why thousands of smart companies all around the US choose
+                  OneStepGPS.com.
+                </div>
+              </div>
+              <div class="hidden row m-0">
+                <div class="hidden button-div">
+                  <a class="hidden button-secondary demoButton">
+                    <img
+                      alt="Chat with us"
+                      onerror="if(this.getAttribute('src') != ''){ this.src='./images/comment-alt-dots-3.png'}"
+                      src="./images-webp/comment-alt-dots-3.webp"
+                      width="17px"
+                      height="15px"
+                      class="comment-alt-dots3"
+                    />Request a free demo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="hidden col-lg-5 col-sm 12 mobile-hidden text-right">
+              <img
+                alt="Dashboard screen"
+                width="950px"
+                onerror="if(this.getAttribute('src') != ''){ this.src='./images/features/dashboard-1.png'}"
+                src="./images/features/dashboard-1.png"
+                data-src="./images-webp/features/dashboard-1.png"
+                class="lazy hidden blue-grad-feature"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<style>
+  .pagination .page-item::before {
+    display: none;
+  }
+
+  .disabledLink {
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+    text-decoration: none;
+  }
+
+  .activeLink {
+    color: white;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.6.4/vuetify.min.js"></script>
+<script>
+  const pagination_tabs = new Vue({
+    delimiters:  ['${', '}'],
+    el: document.getElementById("pagination_tabs"),
+    vuetify: new Vuetify(),
+    data: function(){
+      return {
+        total_pages: "{{ .PaginatedData.TotalPages }}",
+        current_page: "{{ .PaginatedData.CurrentPage }}",
+      }
+    },
+    computed: {
+      displayed_pages() {
+        if (this.total_pages < 3) {
+          return Array.from({ length: this.total_pages }, (_, i) => i + 1);
+        }
+
+        const start_page = Math.max(1, Math.floor((this.current_page - 1) / 3) * 3 + 1)
+        let end_page = Math.min(start_page + 2, this.total_pages);
+
+        if (end_page > this.total_pages) {
+          end_page = this.total_pages;
+        }
+
+        return Array.from({ length: end_page - start_page + 1 }, (_, i) => start_page + i);
+      },
+      // returns link to the starting number of the next set of 3 links.
+      // Ex. if we're on page 4 & click next, --> redirect users to page 7 which pagination tab will display pages 7,8,9
+      next_link() {
+        return "/blog?page=" + (this.displayed_pages[0] + 3);
+      },
+      // returns link to the last number of the previous last set of 3 links
+      prev_link() {
+        return "/blog?page=" + (this.displayed_pages[this.displayed_pages.length - 1] - 3);
+      },
+    }
+  })
+</script>
+{{end}}
