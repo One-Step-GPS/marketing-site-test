@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.onestepgps.com	TRUE	/	FALSE	1999999999	AWSALB	S1tw6Y2JSRQNtzMZKWehM/F0TNgNE012lJi/Fhazpi7Pl9IkW4RSL+siOBmOi+NBdcK29SFTEsG/k18+mNE5iDUsLd5e2QJ2ZR8s9sVIBUZ3SnOjEU/HRsmb0EVb
+www.onestepgps.com	TRUE	/	FALSE	1999999999	AWSALBCORS	S1tw6Y2JSRQNtzMZKWehM/F0TNgNE012lJi/Fhazpi7Pl9IkW4RSL+siOBmOi+NBdcK29SFTEsG/k18+mNE5iDUsLd5e2QJ2ZR8s9sVIBUZ3SnOjEU/HRsmb0EVb
+www.onestepgps.com	TRUE	/	FALSE	1999999999	SameSite	None
+www.onestepgps.com	TRUE	/	FALSE	1999999999	onestepgps_phone	8889197536
+
