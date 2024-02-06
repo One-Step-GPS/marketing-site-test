@@ -644,51 +644,6 @@
             <i id="nav-icon" class="fa fa-bars fa-2x index-black"></i>
             <span class="sr-only">Navigation Dropdown</span></a
           >
-          <div
-            id="headerReviewDiv"
-            class="nav-review-div hidden-600"
-            style="position: absolute; top: 70px; left: 7px"
-          >
-            <div
-              class="main-page-scroll-disappear"
-              style="height: 20px; padding-bottom: 7px"
-            >
-              <img
-                alt=""
-                src="/marketing-site-test/images/star-3.svg"
-                class="hidden"
-                width="14px"
-                height="14px"
-              />
-              <img
-                alt=""
-                src="/marketing-site-test/images/star-3.svg"
-                class="hidden"
-                width="14px"
-                height="14px"
-              />
-              <img
-                alt=""
-                src="/marketing-site-test/images/star-3.svg"
-                class="hidden"
-                width="14px"
-                height="14px"
-              />
-              <img
-                alt=""
-                src="/marketing-site-test/images/star-3.svg"
-                class="hidden"
-                width="14px"
-                height="14px"
-              />
-              <img
-                alt=""
-                src="/marketing-site-test/images/star-3.svg"
-                class="hidden"
-                width="14px"
-                height="14px"
-              />
-            </div>
           </div>
           <!-- <a href="#" class="nav-up-arrow main-page-scroll-appear "><i class="fa fa-arrow-up fa-2x nav-arrow"></i></a> -->
           <a
@@ -1117,7 +1072,6 @@
             var x = document.getElementById("myTopnav");
             var headerContainer = document.getElementById("header-container");
             var dropContent = document.getElementById("drop-content");
-            var reviewContent = document.getElementById("headerReviewDiv");
             var navbar = document.getElementById("myTopnav");
     
             //opening the nav dropdown
@@ -1127,7 +1081,6 @@
               navIcon.classList.replace("fa-bars", "fa-times");
               navIcon.style.color = "#4193df";
               navbar.style.boxShadow = "none";
-              reviewContent.style.display = "none";
               logo.src = "/marketing-site-test/images/onestepgps_color_logotype.svg";
               //closing the dropdown
             } else {
@@ -1135,9 +1088,6 @@
               headerContainer.className = "";
               navIcon.classList.replace("fa-times", "fa-bars");
               dropContent.style.display = "none";
-              if (window.pageYOffset <= navbarTop) {
-                reviewContent.style.display = "block";
-              }
               //do not return to white svg on home page
               if (sPage !== "/") {
                 logo.src = "/marketing-site-test/images/onestepgps_white_logotype.svg";
