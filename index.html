@@ -913,38 +913,11 @@
           function topNavResponsive() {
             //get all the nav elements
             var navIcon = document.getElementById("nav-icon");
-            var navbar = document.getElementById("myTopnav");
             var logo = document.getElementById("logo-mark");
             var navbarTop = navbar.offsetTop;
-            var x = document.getElementById("myTopnav");
             var headerContainer = document.getElementById("header-container");
             var dropContent = document.getElementById("drop-content");
-            var navbar = document.getElementById("myTopnav");
-    
-            //opening the nav dropdown
-            if (!x.classList.contains("responsive")) {
-              x.className += " responsive";
-              headerContainer.className = "header-container";
-              navIcon.classList.replace("fa-bars", "fa-times");
-              navIcon.style.color = "#4193df";
-              navbar.style.boxShadow = "none";
-              logo.src = "/marketing-site-test/images/onestepgps_color_logotype.svg";
-              //closing the dropdown
-            } else {
-              x.classList.remove("responsive");
-              headerContainer.className = "";
-              navIcon.classList.replace("fa-times", "fa-bars");
-              dropContent.style.display = "none";
-              //do not return to white svg on home page
-              if (sPage !== "/") {
-                logo.src = "/marketing-site-test/images/onestepgps_white_logotype.svg";
-                navIcon.style = "color: #ffffff";
-              }
-            }
-    
-            //return false so href does not sroll to top of page
-            return false;
-          }
+
           //sets the active class on the header links on the home page
           //removes active class from others
           function setNavLinkActive(evt) {
